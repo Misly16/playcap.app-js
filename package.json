@@ -1,0 +1,22 @@
+{
+  "name": "playcap.app",
+  "version": "1.0.0",
+  "description": " Node.JS module for interacting with Playcap's API. ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Misly16/playcap.app-js.git"
+  },
+  "author": "Misly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Misly16/playcap.app-js/issues"
+  },
+  "homepage": "https://github.com/Misly16/playcap.app-js#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
