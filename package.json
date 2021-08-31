@@ -1,7 +1,7 @@
 {
   "name": "playcap.app",
   "version": "1.0.0",
-  "description": " Node.JS module for interacting with Playcap's API. ",
+  "description": "Node.JS module for interacting with Playcap's API.",
   "main": "src/index.js",
   "np": {
     "yarn": false
