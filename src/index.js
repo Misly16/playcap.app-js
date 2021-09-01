@@ -29,22 +29,21 @@ class Api {
    */
   async _request(path, apiToken, method, body) {
     const baseUrl = 'https://api.playcap.app/api/v1/';
-    return await fetch(`${baseUrl}${path}`, {
+    const response = await fetch(`${baseUrl}${path}`, {
       method: method,
       body: body ? '' : JSON.stringify(body),
       headers: {'Content-Type': 'application/json', 'User-Agent': `playcap.app-js v${pkg.version}`},
-    }).then((body) => {
-      if (!body) throw Error('[PLAYCAP.APP] Response did not return a body.');
-      return body;
     });
+    if (!response.ok) throw Error(`[PLAYCAP.APP] API returned status code ${response.status}`);
+    return response.json();
   }
   /**
    *
    * @param {string} userId the id of the user to fetch
    * @return {object} body
    */
-  getUser(userId) {
-    return this._request(`users/${userId}`, this.apiToken, 'GET');
+  async getUser(userId) {
+    return await this._request(`users/${userId}`, this.apiToken, 'GET');
   }
 }
 
