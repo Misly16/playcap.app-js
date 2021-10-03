@@ -45,6 +45,14 @@ class Api {
   async getUser(userId) {
     return await this._request(`users/${userId}`, this.apiToken, 'GET');
   }
+  
+  async getPost(postId) {
+    return await this._request(`posts/${postId}`, this.apiToken, 'GET');
+  }
+  
+  async getUserPosts(userId) {
+    return await this._request(`users/${userId}/posts`, this.apiToken, 'GET');
+  }
 }
 
 module.exports = Api;
