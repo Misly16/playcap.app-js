@@ -53,7 +53,7 @@ class Api {
   async getUserPosts(userId) {
     return await this._request(`users/${userId}/posts`, this.apiToken, 'GET');
   }
-  async getUserAvarar(userId) {
+  async getUserAvatar(userId) {
     const request = await this._request(`users/${userId}`, this.apiToken, 'GET');
     return request.avatar ? `https://cdn.playcap.app/profiles/${avatar}` : `https://playcap.app/profile.png`;
   }
